@@ -14,8 +14,6 @@ interface NotesDao {
     fun getAlphabetizedWords(): Flow<List<Notes>>
 
     @Insert(onConflict = OnConflictStrategy.IGNORE)
-    suspend fun insert(word: Notes)
+    suspend fun insert(notes: Notes)
 
-    @Query("DELETE FROM notes_table")
-    suspend fun deleteAll()
 }
