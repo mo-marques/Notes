@@ -8,6 +8,6 @@ class NotesRepository(private val dao: NotesDao) {
 
     suspend fun insert(notes: Notes){
         dao.insert(notes)
-        
+
     }
 }
